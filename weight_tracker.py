@@ -19,6 +19,7 @@ client = fitbit.Fitbit(
     CLIENT_SECRET,
     access_token=ACCESS_TOKEN,
     refresh_token=REFRESH_TOKEN,
+    system=fitbit.Fitbit.METRIC,
 )
 
 if len(sys.argv) > 1:
