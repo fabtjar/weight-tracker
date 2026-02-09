@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import json
 import os
 import sys
 from datetime import datetime
@@ -31,7 +32,7 @@ else:
 
 try:
     entries = client.get_bodyweight(base_date=base_date, period="7d")
-    print(entries)
+    print(json.dumps(entries))
 except fitbit.exceptions.HTTPUnauthorized:
     print(
         "Unauthorized access. Please run ./gather_keys_oauth2.py to get access to tokens."
